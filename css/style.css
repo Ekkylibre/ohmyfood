@@ -1,6 +1,7 @@
 /* Couleurs */
 html {
   background-color: #F6F6F6;
+  font-family: Roboto;
 }
 
 /* Header */
@@ -20,7 +21,6 @@ body main .location {
   gap: 17px;
 }
 body main .location p {
-  font-family: Roboto;
   font-weight: 500;
 }
 body main .hero {
@@ -43,4 +43,19 @@ body main .steps .step-deux {
 }
 body main .steps .step-trois {
   display: flex;
+}
+body main .restaurants-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body main .card img {
+  width: 340px;
+  height: 251px;
 }/*# sourceMappingURL=style.css.map */

@@ -13,6 +13,7 @@ $violet: #9356DC;
 
 html {
     background-color: #F6F6F6;
+    font-family: Roboto;
 }
 
 /* Header */
@@ -36,7 +37,6 @@ body {
             gap: 17px;
 
             p {
-                font-family: Roboto;
                 font-weight: 500;
             }
         }
@@ -64,6 +64,24 @@ body {
 
             .step-trois {
                 display: flex;
+            }
+        }
+
+        .restaurants-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            img {
+                width: 340px;
+                height: 251px;
             }
         }
     }
