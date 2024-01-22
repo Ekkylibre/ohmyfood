@@ -1,4 +1,15 @@
 /* Couleurs */
 html {
   background-color: #F6F6F6;
+}
+
+/* Header */
+body header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body header .logo {
+  font-family: Shrikhand;
+  font-weight: 400;
 }/*# sourceMappingURL=style.css.map */

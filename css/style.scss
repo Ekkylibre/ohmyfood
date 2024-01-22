@@ -6,6 +6,25 @@ $bleu: #003A68;
 $bleuClair: #89C8FA;
 $violet: #9356DC;
 
+// * {
+//     margin: 0;
+//     padding: 0;
+// }
+
 html {
     background-color: #F6F6F6;
+}
+
+/* Header */
+body {
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .logo {
+            font-family: Shrikhand;
+            font-weight: 400;
+        }
+    }
 }
