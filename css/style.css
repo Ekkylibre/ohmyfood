@@ -28,4 +28,19 @@ body main .hero {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+body main .steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+body main .steps .step-un {
+  display: flex;
+}
+body main .steps .step-deux {
+  display: flex;
+}
+body main .steps .step-trois {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */
