@@ -27,4 +27,18 @@ body {
             font-weight: 400;
         }
     }
+
+    main {
+        .location {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 17px;
+
+            p {
+                font-family: Roboto;
+                font-weight: 500;
+            }
+        }
+    }
 }

@@ -12,4 +12,14 @@ body header {
 body header .logo {
   font-family: Shrikhand;
   font-weight: 400;
+}
+body main .location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+}
+body main .location p {
+  font-family: Roboto;
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */
