@@ -18,6 +18,9 @@ body header .logo {
   font-family: Shrikhand;
   font-weight: 400;
 }
+body main {
+  background-color: #f6f6f6;
+}
 body main .location {
   display: flex;
   justify-content: center;
@@ -107,17 +110,39 @@ body main .restaurants-container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 18px;
 }
 body main .card {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: 15px;
 }
 body main .card img {
   width: 340px;
   height: 251px;
+  border-radius: 15px 15px 0 0;
 }
-body footer .footer-content {
+body main .card .bloc-restaurant {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20px;
+  padding-right: 20px;
+}
+body main .card .bloc-restaurant .text-restaurant {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+body main .card .bloc-restaurant .text-restaurant h4 {
+  margin-bottom: 0;
+}
+body main .card .bloc-restaurant .text-restaurant p {
+  margin-top: 0;
+}
+
+footer .footer-content {
   display: flex;
   align-items: center;
 }/*# sourceMappingURL=style.css.map */
