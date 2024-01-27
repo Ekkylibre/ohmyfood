@@ -32,6 +32,9 @@ body .background-img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+body main {
+  background-color: #f6f6f6;
+}
 body main .title {
   display: flex;
   align-items: center;
@@ -43,4 +46,43 @@ body main .icon-heart {
   position: absolute;
   right: 41px;
   padding-right: 17px;
+}
+body main section {
+  padding-left: 13px;
+  padding-right: 13px;
+}
+body main section h3 {
+  font-weight: 100;
+}
+body main section .starters {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+body main section .starters .starters-background {
+  background-color: greenyellow;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 15px;
+  padding-top: 13.5px;
+  padding-bottom: 13.5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+body main section .starters .starters-background h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+body main section .starters .starters-background p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+body main section .starters .starters-text {
+  display: flex;
+}
+body main section .starters .starters-text .price {
+  position: absolute;
+  right: 28px;
+  font-weight: 700;
 }/*# sourceMappingURL=style_menu.css.map */
