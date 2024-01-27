@@ -33,7 +33,11 @@ body .background-img {
      object-fit: cover;
 }
 body main {
-  background-color: #f6f6f6;
+  background-color: #7E7E7E;
+  border-radius: 30px 30px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 body main .title {
   display: flex;
@@ -41,6 +45,9 @@ body main .title {
   padding-left: 17px;
   font-family: Shrikhand;
   font-weight: 400;
+}
+body main .title h2 {
+  margin-bottom: 0;
 }
 body main .icon-heart {
   position: absolute;
@@ -61,6 +68,7 @@ body main section .card {
 }
 body main section .card .background-box {
   background-color: greenyellow;
+  box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -85,4 +93,20 @@ body main section .card .text-box .price {
   position: absolute;
   right: 28px;
   font-weight: 700;
+}
+body main .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .button button {
+  width: 218px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 25px;
+  background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  border: none;
+  color: white;
+  font-size: 16px;
 }/*# sourceMappingURL=style_menu.css.map */
