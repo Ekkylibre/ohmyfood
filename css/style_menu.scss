@@ -98,12 +98,12 @@ body {
                 font-weight: 100;
             }
 
-            .starters {
+            .card {
                 display: flex;
                 flex-direction: column;
                 gap: 12px;
 
-                .starters-background {
+                .background-box {
                     background-color: greenyellow;
                     display: flex;
                     flex-direction: column;
@@ -112,7 +112,7 @@ body {
                     @include padding-box-text;
                 }
 
-                .starters-text {
+                .text-box {
                     display: flex;
 
                     .price {

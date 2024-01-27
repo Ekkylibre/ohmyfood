@@ -54,12 +54,12 @@ body main section {
 body main section h3 {
   font-weight: 100;
 }
-body main section .starters {
+body main section .card {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-body main section .starters .starters-background {
+body main section .card .background-box {
   background-color: greenyellow;
   display: flex;
   flex-direction: column;
@@ -70,18 +70,18 @@ body main section .starters .starters-background {
   padding-left: 15px;
   padding-right: 15px;
 }
-body main section .starters .starters-background h4 {
+body main section .card .background-box h4 {
   margin-top: 0;
   margin-bottom: 0;
 }
-body main section .starters .starters-background p {
+body main section .card .background-box p {
   margin-top: 0;
   margin-bottom: 0;
 }
-body main section .starters .starters-text {
+body main section .card .text-box {
   display: flex;
 }
-body main section .starters .starters-text .price {
+body main section .card .text-box .price {
   position: absolute;
   right: 28px;
   font-weight: 700;
