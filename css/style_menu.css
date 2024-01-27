@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   margin: 0;
   padding: 0;
 }
@@ -33,12 +33,12 @@ body .background-img {
      object-fit: cover;
 }
 body main {
-  background-color: #7E7E7E;
+  background-color: #f6f6f6;
   border-radius: 30px 30px 0 0;
   display: flex;
   flex-direction: column;
-  padding-bottom: 40px;
   gap: 40px;
+  transform: translateY(-40px);
 }
 body main .title {
   display: flex;
@@ -49,11 +49,12 @@ body main .title {
 }
 body main .title h2 {
   margin-bottom: 0;
+  font-weight: 400;
 }
 body main .icon-heart {
   position: absolute;
   right: 41px;
-  padding-right: 17px;
+  margin-top: 20px;
 }
 body main section {
   padding-left: 13px;
@@ -61,6 +62,16 @@ body main section {
 }
 body main section h3 {
   font-weight: 100;
+  margin-top: 0;
+}
+body main section h3::after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background: #99E2D0;
+  position: absolute;
+  left: 15px;
+  transform: translateY(27px);
 }
 body main section .card {
   display: flex;
@@ -68,7 +79,7 @@ body main section .card {
   gap: 12px;
 }
 body main section .card .background-box {
-  background-color: greenyellow;
+  background-color: white;
   box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -89,6 +100,7 @@ body main section .card .background-box p {
 }
 body main section .card .text-box {
   display: flex;
+  font-weight: 300;
 }
 body main section .card .text-box .price {
   position: absolute;

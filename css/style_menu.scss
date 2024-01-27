@@ -46,7 +46,7 @@ html {
 }
 
 body {
-    background-color: #F6F6F6;
+    background-color: $grisClair;
     margin: 0;
     padding: 0;
 
@@ -75,12 +75,12 @@ body {
     }
 
     main {
-        background-color: $gris;
+        background-color: $grisClair;
         border-radius: 30px 30px 0 0;
         display: flex;
         flex-direction: column;
-        padding-bottom: 40px;
         gap: 40px;
+        transform: translateY(-40px);
 
         .title {
             display: flex;
@@ -91,13 +91,14 @@ body {
 
             h2 {
                 margin-bottom: 0;
+                font-weight: 400;
             }
         }
 
         .icon-heart {
             position: absolute;
             right: 41px;
-            padding-right: 17px;
+            margin-top: 20px;
         }
 
         section {
@@ -105,6 +106,17 @@ body {
 
             h3 {
                 font-weight: 100;
+                margin-top: 0;
+
+                &::after {
+                    content: '';
+                    width: 50px;
+                    height: 4px;
+                    background: $vertClair;
+                    position: absolute;
+                    left: 15px;
+                    transform: translateY(27px);
+                }
             }
 
             .card {
@@ -113,7 +125,7 @@ body {
                 gap: 12px;
 
                 .background-box {
-                    background-color: greenyellow;
+                    background-color: white;
                     box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
                     display: flex;
                     flex-direction: column;
@@ -124,6 +136,7 @@ body {
 
                 .text-box {
                     display: flex;
+                    font-weight: 300;
 
                     .price {
                         position: absolute;
@@ -134,7 +147,7 @@ body {
             }
         }
 
-        .button{
+        .button {
             @include flexbox-center;
 
             button {
@@ -158,7 +171,7 @@ body {
         color: white;
         padding: 22px 25px 22px 25px;
         gap: 16px;
-    
+
         .logo {
             font-family: Shrikhand;
             font-size: 18px;
@@ -166,27 +179,27 @@ body {
             margin-top: 0;
             margin-bottom: 0;
         }
-    
+
         .text-footer {
             display: flex;
             flex-direction: column;
             gap: 7px;
         }
-    
+
         .footer-content {
             display: flex;
             align-items: center;
-    
+
             .fa-utensils {
                 padding-right: 11px;
             }
-    
+
             .fa-hands-helping {
                 padding-right: 11px;
                 font-size: 10px;
             }
         }
-    
+
         p {
             margin-top: 0;
             margin-bottom: 0;
