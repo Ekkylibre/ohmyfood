@@ -1,0 +1,48 @@
+/* Mixin */
+@mixin flexbox-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin padding-margin {
+    padding-left: 17px;
+}
+
+/* Couleurs */
+$blanc: #F3F3F3;
+$vert: #008766;
+$vertClair: #99E2D0;
+$bleu: #003A68;
+$bleuClair: #89C8FA;
+$violet: #9356DC;
+$gris: #7E7E7E;
+$grisClair: #f6f6f6;
+
+html {
+    font-family: Roboto;
+}
+
+body {
+    background-color: #F6F6F6;
+    margin: 0;
+    padding: 0;
+
+    header {
+        @include flexbox-center;
+        background: var(--White, #FFF);
+        position: relative;
+        height: 63px;
+
+        .fa-arrow-left {
+            font-size: 20px;
+            position: absolute;
+            left: 17px;
+        }
+
+        .logo {
+            font-family: Shrikhand;
+            font-weight: 400;
+        }
+    }
+}

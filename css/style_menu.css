@@ -1,0 +1,28 @@
+/* Mixin */
+/* Couleurs */
+html {
+  font-family: Roboto;
+}
+
+body {
+  background-color: #F6F6F6;
+  margin: 0;
+  padding: 0;
+}
+body header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--White, #FFF);
+  position: relative;
+  height: 63px;
+}
+body header .fa-arrow-left {
+  font-size: 20px;
+  position: absolute;
+  left: 17px;
+}
+body header .logo {
+  font-family: Shrikhand;
+  font-weight: 400;
+}/*# sourceMappingURL=style_menu.css.map */
