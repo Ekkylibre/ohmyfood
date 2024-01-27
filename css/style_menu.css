@@ -31,4 +31,16 @@ body .background-img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+body main .title {
+  display: flex;
+  align-items: center;
+  padding-left: 17px;
+  font-family: Shrikhand;
+  font-weight: 400;
+}
+body main .icon-heart {
+  position: absolute;
+  right: 41px;
+  padding-right: 17px;
 }/*# sourceMappingURL=style_menu.css.map */
