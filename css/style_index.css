@@ -59,6 +59,7 @@ body main .hero button {
   border: none;
   color: white;
   font-size: 16px;
+  cursor: pointer;
 }
 body main .hero button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
@@ -176,6 +177,7 @@ body main section .restaurants .card {
   border-radius: 15px;
   background-color: white;
   position: relative;
+  cursor: pointer;
 }
 body main section .restaurants .card .new-card {
   display: flex;
@@ -388,5 +390,6 @@ footer p {
   }
   to {
     opacity: 0;
+    visibility: hidden;
   }
 }/*# sourceMappingURL=style_index.css.map */

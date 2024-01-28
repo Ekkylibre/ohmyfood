@@ -79,6 +79,7 @@ body {
                 border: none;
                 color: white;
                 font-size: 16px;
+                cursor: pointer;
 
                 &:hover {
                     background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
@@ -214,6 +215,7 @@ body {
                     border-radius: 15px;
                     background-color: white;
                     position: relative;
+                    cursor: pointer;
 
                     .new-card {
                         @include flexbox-center;
@@ -444,6 +446,7 @@ footer {
     }
     66.6% {
       z-index: 1;
+      
     }
   }
 
@@ -453,6 +456,7 @@ footer {
     }
     to {
       opacity: 0;
+      visibility: hidden;
     }
   }
   
