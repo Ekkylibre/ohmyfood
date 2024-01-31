@@ -31,7 +31,7 @@
     }
 }
 
-/* Couleurs */
+/* Coulors */
 $blanc: #F3F3F3;
 $vert: #008766;
 $vertClair: #99E2D0;
@@ -40,6 +40,7 @@ $bleuClair: #89C8FA;
 $violet: #9356DC;
 $gris: #7E7E7E;
 $grisClair: #f6f6f6;
+$rose: #FF79DA;
 
 html {
     font-family: Roboto;
@@ -56,11 +57,15 @@ body {
         position: relative;
         height: 63px;
 
-        .fa-arrow-left {
-            font-size: 20px;
+        a {
+            color: black;
             position: absolute;
             left: 17px;
-            cursor: pointer;
+
+            .fa-arrow-left {
+                font-size: 20px;
+                cursor: pointer;
+            }
         }
 
         .logo {
@@ -94,20 +99,23 @@ body {
                 margin-bottom: 0;
                 font-weight: 400;
             }
-        }
 
-        .icon-heart-one {
-            position: absolute;
-            right: 41px;
-            margin-top: 20px;
-            cursor: pointer;
-        }
+            .icon-heart {
+                position: absolute;
+                right: 41px;
+                margin-top: 20px;
+                cursor: pointer;
 
-        .icon-heart-two {
-            position: absolute;
-            right: 41px;
-            margin-top: 20px;
-            cursor: pointer;
+                svg {
+                    fill: none;
+
+                    &:hover {
+                        fill: url(#gradient);
+                        stroke: url(#gradient);
+                        stroke-width: 0px;
+                    }
+                }
+            }
         }
 
         section {

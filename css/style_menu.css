@@ -1,5 +1,5 @@
 /* Mixin */
-/* Couleurs */
+/* Coulors */
 html {
   font-family: Roboto;
 }
@@ -17,10 +17,13 @@ body header {
   position: relative;
   height: 63px;
 }
-body header .fa-arrow-left {
-  font-size: 20px;
+body header a {
+  color: black;
   position: absolute;
   left: 17px;
+}
+body header a .fa-arrow-left {
+  font-size: 20px;
   cursor: pointer;
 }
 body header .logo {
@@ -52,17 +55,19 @@ body main .title h2 {
   margin-bottom: 0;
   font-weight: 400;
 }
-body main .icon-heart-one {
+body main .title .icon-heart {
   position: absolute;
   right: 41px;
   margin-top: 20px;
   cursor: pointer;
 }
-body main .icon-heart-two {
-  position: absolute;
-  right: 41px;
-  margin-top: 20px;
-  cursor: pointer;
+body main .title .icon-heart svg {
+  fill: none;
+}
+body main .title .icon-heart svg:hover {
+  fill: url(#gradient);
+  stroke: url(#gradient);
+  stroke-width: 0px;
 }
 body main section {
   padding-left: 13px;
