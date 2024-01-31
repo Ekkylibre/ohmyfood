@@ -14,11 +14,7 @@
     padding-right: 13px;
 }
 
-@mixin padding-box-text {
-    padding-top: 13.5px;
-    padding-bottom: 13.5px;
-    padding-left: 15px;
-    padding-right: 15px;
+@mixin margin-box-text {
 
     h4 {
         margin-top: 0;
@@ -144,21 +140,60 @@ body {
                 .background-box {
                     background-color: white;
                     box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
-                    display: flex;
-                    flex-direction: column;
-                    gap: 5px;
                     border-radius: 15px;
-                    @include padding-box-text;
-                }
+                    @include margin-box-text;
+                    cursor: pointer;
+                    overflow: hidden;
 
-                .text-box {
-                    display: flex;
-                    font-weight: 300;
+                    &:hover {
 
-                    .price {
-                        position: absolute;
-                        right: 28px;
-                        font-weight: 700;
+                        .content-box {
+                            .content-icon {
+                                .price {
+                                    animation: 1s slide-left ease forwards;
+                                }
+
+                                svg {
+                                    display: block;
+                                    animation: 1s slide-left ease forwards;
+                                }
+                            }
+                        }
+                    }
+
+                    .content-box {
+                        display: flex;
+                        justify-content: space-between;
+                        font-weight: 300;
+                        height: 69px;
+                        
+                        white-space: nowrap;
+
+                        .text-box {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 5px;
+                            padding-top: 13.5px;
+                            padding-bottom: 13.5px;
+                            padding-left: 15px;
+                            overflow: hidden;
+                        }
+
+                        .content-icon {
+                            display: flex;
+
+                            .price {
+                                display: flex;
+                                align-items: flex-end;
+                                background-color: red;
+                                padding: 15px;
+                                font-weight: 700;
+                            }
+
+                            svg {
+                                display: none;
+                            }
+                        }
                     }
                 }
             }
@@ -178,10 +213,12 @@ body {
                 color: white;
                 font-size: 16px;
                 cursor: pointer;
+                transition: .3s ease-in-out;
 
                 &:hover {
                     background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
                     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+                    transition: .3s ease-in-out;
                 }
             }
         }
@@ -229,5 +266,17 @@ body {
             display: inline-block;
             vertical-align: middle;
         }
+    }
+}
+
+/* keyframes */
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(60px);
+    }
+
+    100% {
+        transform: translateX(0px);
     }
 }

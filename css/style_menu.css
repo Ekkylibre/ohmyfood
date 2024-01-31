@@ -94,14 +94,9 @@ body main section .card {
 body main section .card .background-box {
   background-color: white;
   box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
   border-radius: 15px;
-  padding-top: 13.5px;
-  padding-bottom: 13.5px;
-  padding-left: 15px;
-  padding-right: 15px;
+  cursor: pointer;
+  overflow: hidden;
 }
 body main section .card .background-box h4 {
   margin-top: 0;
@@ -111,14 +106,41 @@ body main section .card .background-box p {
   margin-top: 0;
   margin-bottom: 0;
 }
-body main section .card .text-box {
-  display: flex;
-  font-weight: 300;
+body main section .card .background-box:hover .content-box .content-icon .price {
+  animation: 1s slide-left ease forwards;
 }
-body main section .card .text-box .price {
-  position: absolute;
-  right: 28px;
+body main section .card .background-box:hover .content-box .content-icon svg {
+  display: block;
+  animation: 1s slide-left ease forwards;
+}
+body main section .card .background-box .content-box {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+  height: 69px;
+  white-space: nowrap;
+}
+body main section .card .background-box .content-box .text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 13.5px;
+  padding-bottom: 13.5px;
+  padding-left: 15px;
+  overflow: hidden;
+}
+body main section .card .background-box .content-box .content-icon {
+  display: flex;
+}
+body main section .card .background-box .content-box .content-icon .price {
+  display: flex;
+  align-items: flex-end;
+  background-color: red;
+  padding: 15px;
   font-weight: 700;
+}
+body main section .card .background-box .content-box .content-icon svg {
+  display: none;
 }
 body main .button {
   display: flex;
@@ -136,10 +158,12 @@ body main .button button {
   color: white;
   font-size: 16px;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 body main .button button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  transition: 0.3s ease-in-out;
 }
 body footer {
   display: flex;
@@ -177,4 +201,14 @@ body footer p {
   margin-bottom: 0;
   display: inline-block;
   vertical-align: middle;
+}
+
+/* keyframes */
+@keyframes slide-left {
+  0% {
+    transform: translateX(60px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }/*# sourceMappingURL=style_menu.css.map */

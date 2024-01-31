@@ -60,12 +60,12 @@ body main .hero button {
   color: white;
   font-size: 16px;
   cursor: pointer;
-  transition: box-shadow 3s ease;
-  /* A travailler*/
+  transition: 0.3s ease-in-out;
 }
 body main .hero button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  transition: 0.3s ease-in-out;
 }
 body main .hero p {
   margin-top: 0;
