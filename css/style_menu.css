@@ -58,7 +58,7 @@ body main .title h2 {
 body main .title .icon-heart {
   position: absolute;
   right: 41px;
-  margin-top: 20px;
+  margin-top: 25px;
   cursor: pointer;
 }
 body main .title .icon-heart svg {
@@ -227,5 +227,39 @@ body footer p {
   }
   100% {
     transform: translateX(0px);
+  }
+}
+/* Responsive */
+@media screen and (min-width: 1440px) {
+  body .img {
+    height: 383px;
+  }
+  body main {
+    margin-left: 193px;
+    margin-right: 193px;
+  }
+  body main .title {
+    justify-content: center;
+  }
+  body main .title .icon-heart {
+    right: 360px;
+  }
+  body main section {
+    margin-left: 210px;
+    margin-right: 210px;
+  }
+  body main section h3:after {
+    margin-left: 210px;
+    margin-right: 210px;
+  }
+  body footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 100px;
+  }
+  body footer .text-footer {
+    display: flex;
+    flex-direction: row;
   }
 }/*# sourceMappingURL=style_menu.css.map */

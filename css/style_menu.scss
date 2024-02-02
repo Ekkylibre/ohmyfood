@@ -99,7 +99,7 @@ body {
             .icon-heart {
                 position: absolute;
                 right: 41px;
-                margin-top: 20px;
+                margin-top: 25px;
                 cursor: pointer;
 
                 svg {
@@ -159,7 +159,7 @@ body {
                             }
                         }
                     }
-                    
+
                     .content-box {
                         display: flex;
                         justify-content: space-between;
@@ -173,19 +173,19 @@ body {
                             padding-top: 13.5px;
                             padding-bottom: 13.5px;
                             padding-left: 15px;
-                            
+
                             /* A travailler */
                             white-space: nowrap;
                             text-overflow: ellipsis;
                             overflow: hidden;
 
                             h4 {
-                                overflow: hidden; 
+                                overflow: hidden;
                                 text-overflow: ellipsis;
                             }
 
                             p {
-                                overflow: hidden; 
+                                overflow: hidden;
                                 text-overflow: ellipsis;
                             }
                         }
@@ -296,5 +296,52 @@ body {
 
     100% {
         transform: translateX(0px);
+    }
+}
+
+/* Responsive */
+
+@media screen and (min-width: 1440px) {
+    body {
+        .img {
+            height: 383px;
+        }
+
+        main {
+            margin-left: 193px;
+            margin-right: 193px;
+
+            .title {
+                justify-content: center;
+
+                .icon-heart {
+                    right: 360px;
+                }
+            }
+
+            section {
+                margin-left: 210px;
+                margin-right: 210px;
+
+                h3 {
+                    &:after {
+                        margin-left: 210px;
+                        margin-right: 210px;
+                    }
+                }
+            }
+        }
+
+        footer {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            gap: 100px;
+      
+            .text-footer {
+              display: flex;
+              flex-direction: row;
+            }
+          }
     }
 }
