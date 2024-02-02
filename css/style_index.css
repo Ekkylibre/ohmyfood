@@ -76,6 +76,7 @@ body main section .functioning {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: white;
   padding-top: 48px;
   padding-bottom: 68px;
@@ -158,7 +159,7 @@ body main section .restaurants {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-items: center;
+  flex-direction: column;
   padding-top: 54px;
   padding-bottom: 66px;
 }
@@ -408,5 +409,30 @@ footer p {
   to {
     opacity: 0;
     visibility: hidden;
+  }
+}
+/* Responsive */
+@media screen and (min-width: 1440px) {
+  body main section .functioning div .steps {
+    display: flex;
+    flex-direction: row;
+  }
+  body main section .restaurants .restaurants-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px 100px;
+  }
+  body main section .restaurants .restaurants-container .card img {
+    width: 490px;
+  }
+  body footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 100px;
+  }
+  body footer .text-footer {
+    display: flex;
+    flex-direction: row;
   }
 }/*# sourceMappingURL=style_index.css.map */
