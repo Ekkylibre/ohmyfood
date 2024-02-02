@@ -109,7 +109,7 @@ body main section .card .background-box p {
 body main section .card .background-box:hover .content-box .content-icon .price {
   animation: 1s slide-left ease forwards;
 }
-body main section .card .background-box:hover .content-box .content-icon svg {
+body main section .card .background-box:hover .content-box .content-icon .fa-check-circle {
   display: block;
   animation: 1s slide-left ease forwards;
 }
@@ -117,8 +117,7 @@ body main section .card .background-box .content-box {
   display: flex;
   justify-content: space-between;
   font-weight: 300;
-  height: 69px;
-  white-space: nowrap;
+  overflow: hidden;
 }
 body main section .card .background-box .content-box .text-box {
   display: flex;
@@ -127,7 +126,18 @@ body main section .card .background-box .content-box .text-box {
   padding-top: 13.5px;
   padding-bottom: 13.5px;
   padding-left: 15px;
+  /* A travailler */
+  white-space: nowrap;
+  text-overflow: ellipsis;
   overflow: hidden;
+}
+body main section .card .background-box .content-box .text-box h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+body main section .card .background-box .content-box .text-box p {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 body main section .card .background-box .content-box .content-icon {
   display: flex;
@@ -135,12 +145,19 @@ body main section .card .background-box .content-box .content-icon {
 body main section .card .background-box .content-box .content-icon .price {
   display: flex;
   align-items: flex-end;
-  background-color: red;
+  background-color: white;
   padding: 15px;
   font-weight: 700;
 }
-body main section .card .background-box .content-box .content-icon svg {
+body main section .card .background-box .content-box .content-icon .fa-check-circle {
   display: none;
+  color: white;
+  background-color: #99E2D0;
+  font-size: 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 body main .button {
   display: flex;
