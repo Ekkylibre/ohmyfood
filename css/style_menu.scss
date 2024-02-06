@@ -121,12 +121,12 @@ body {
 
         #section2 {
             animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-            animation-delay: 0.5s;
+            animation-delay: 0.25s;
         }
 
         #section3 {
             animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-            animation-delay: 1s;
+            animation-delay: 0.5s;
         }
 
         section {
@@ -405,6 +405,7 @@ body {
             flex-direction: row-reverse;
             align-items: center;
             gap: 100px;
+            padding-top: 64px;
       
             .text-footer {
               display: flex;
