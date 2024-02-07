@@ -1,46 +1,6 @@
-/* Mixin */
-@mixin flexbox-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-@mixin padding {
-    padding-left: 17px;
-}
-
-@mixin padding-box-container {
-    padding-left: 13px;
-    padding-right: 13px;
-}
-
-@mixin margin-box-text {
-
-    h4 {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    p {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-}
-
-@mixin margin-top-bottom {
-    margin: 0;
-    padding: 0;
-  }
-/* Coulors */
-$blanc: #F3F3F3;
-$vert: #008766;
-$vertClair: #99E2D0;
-$bleu: #003A68;
-$bleuClair: #89C8FA;
-$violet: #9356DC;
-$gris: #7E7E7E;
-$grisClair: #f6f6f6;
-$rose: #FF79DA;
+@import "style/colors";
+@import "style/mixins";
+@import "style/keyframes";
 
 html {
     font-family: Roboto;
@@ -300,29 +260,6 @@ body {
         }
     }
 }
-
-/* keyframes */
-
-@keyframes slide-left {
-    from {
-        transform: translateX(100%);
-    }
-
-    to {
-        transform: translateX(0%);
-    }
-}
-
-@keyframes slide-in-bottom {
-    0% {
-      transform: translateY(1000px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
 
 /* Responsive */
 

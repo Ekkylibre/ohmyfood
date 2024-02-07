@@ -1,0 +1,49 @@
+@mixin flexbox-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin padding {
+    padding-left: 17px;
+}
+
+@mixin padding-box-container {
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+@mixin margin-box-text {
+
+    h4 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+@mixin margin-top-bottom {
+    margin: 0;
+    padding: 0;
+  }
+
+  @mixin flexbox-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin flebox-align-center {
+    display: flex;
+    align-items: center;
+  }
+  
+  @mixin icons-menu {
+    padding-right: 25px;
+    font-size: 1.5em;
+    padding-top: 20px;
+  }
