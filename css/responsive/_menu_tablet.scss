@@ -1,0 +1,43 @@
+@media screen and (min-width: 1024px) {
+    body {
+        .img {
+            height: 383px;
+        }
+
+        main {
+            margin-left: 193px;
+            margin-right: 193px;
+
+            .title {
+                justify-content: center;
+                .icon-heart {
+                    right: 150px;
+                }
+            }
+
+            section {
+                margin-left: 10px;
+                margin-right: 10px;
+
+                h3 {
+                    &:after {
+                        margin-left: 0px;
+                        margin-right: 0px;
+                    }
+                }
+            }
+        }
+
+        footer {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            gap: 100px;
+      
+            .text-footer {
+              display: flex;
+              flex-direction: row;
+            }
+          }
+    }
+}

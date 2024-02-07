@@ -98,6 +98,51 @@
     visibility: hidden;
   }
 }
+@media screen and (min-width: 1024px) {
+  body main section .functioning div .steps .text-step {
+    width: 600px;
+  }
+  body main section .restaurants .restaurants-container .card img {
+    width: 600px;
+  }
+  body footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 100px;
+  }
+  body footer .text-footer {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1440px) {
+  body main section .functioning div .steps {
+    display: flex;
+    flex-direction: row;
+  }
+  body main section .functioning div .steps .text-step {
+    width: 322.486px;
+  }
+  body main section .restaurants .restaurants-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px 100px;
+  }
+  body main section .restaurants .restaurants-container .card img {
+    width: 490px;
+  }
+  body footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 100px;
+  }
+  body footer .text-footer {
+    display: flex;
+    flex-direction: row;
+  }
+}
 html {
   font-family: Roboto;
 }
@@ -418,51 +463,4 @@ footer p {
 .overlay .container .dot-1 {
   background-color: #FF79DA;
   animation: dot-1-move 2s ease infinite, index 6s -2s ease infinite;
-}
-
-/* Responsive */
-@media screen and (min-width: 1024px) {
-  body main section .functioning div .steps .text-step {
-    width: 600px;
-  }
-  body main section .restaurants .restaurants-container .card img {
-    width: 600px;
-  }
-  body footer {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    gap: 100px;
-  }
-  body footer .text-footer {
-    display: flex;
-    flex-direction: row;
-  }
-}
-@media screen and (min-width: 1440px) {
-  body main section .functioning div .steps {
-    display: flex;
-    flex-direction: row;
-  }
-  body main section .functioning div .steps .text-step {
-    width: 322.486px;
-  }
-  body main section .restaurants .restaurants-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 50px 100px;
-  }
-  body main section .restaurants .restaurants-container .card img {
-    width: 490px;
-  }
-  body footer {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    gap: 100px;
-  }
-  body footer .text-footer {
-    display: flex;
-    flex-direction: row;
-  }
 }/*# sourceMappingURL=style_index.css.map */

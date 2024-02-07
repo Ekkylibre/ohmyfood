@@ -2,6 +2,9 @@
 @import "style/mixins";
 @import "style/keyframes";
 
+@import "responsive/index_tablet";
+@import "responsive/index_desktop";
+
 html {
   font-family: Roboto;
 }
@@ -343,99 +346,6 @@ footer {
     .dot-1 {
       background-color: $Secondary;
       animation: dot-1-move 2s ease infinite, index 6s -2s ease infinite;
-    }
-  }
-}
-
-/* Responsive */
-
-@media screen and (min-width: 1024px) {
-  body {
-    main {
-      section {
-        .functioning {
-          div {
-            .steps {
-              .text-step {
-                width: 600px;
-              }
-            }
-          }
-        }
-      }
-
-      section {
-        .restaurants {
-          .restaurants-container {
-            .card {
-              img {
-                width: 600px;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    footer {
-      display: flex;
-      flex-direction: row-reverse;
-      align-items: center;
-      gap: 100px;
-
-      .text-footer {
-        display: flex;
-        flex-direction: row;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  body {
-    main {
-      section {
-        .functioning {
-          div {
-            .steps {
-              display: flex;
-              flex-direction: row;
-
-              .text-step {
-                width: 322.486px;
-              }
-            }
-          }
-        }
-      }
-
-      section {
-        .restaurants {
-          .restaurants-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 50px 100px;
-
-            .card {
-              img {
-                width: 490px;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    footer {
-      display: flex;
-      flex-direction: row-reverse;
-      align-items: center;
-      gap: 100px;
-
-      .text-footer {
-        display: flex;
-        flex-direction: row;
-      }
     }
   }
 }

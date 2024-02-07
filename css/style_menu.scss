@@ -2,6 +2,9 @@
 @import "style/mixins";
 @import "style/keyframes";
 
+@import "responsive/menu_tablet";
+@import "responsive/menu_desktop";
+
 html {
     font-family: Roboto;
 }
@@ -258,97 +261,5 @@ body {
             display: inline-block;
             vertical-align: middle;
         }
-    }
-}
-
-/* Responsive */
-
-@media screen and (min-width: 1024px) {
-    body {
-        .img {
-            height: 383px;
-        }
-
-        main {
-            margin-left: 193px;
-            margin-right: 193px;
-
-            .title {
-                justify-content: center;
-                .icon-heart {
-                    right: 150px;
-                }
-            }
-
-            section {
-                margin-left: 10px;
-                margin-right: 10px;
-
-                h3 {
-                    &:after {
-                        margin-left: 0px;
-                        margin-right: 0px;
-                    }
-                }
-            }
-        }
-
-        footer {
-            display: flex;
-            flex-direction: row-reverse;
-            align-items: center;
-            gap: 100px;
-      
-            .text-footer {
-              display: flex;
-              flex-direction: row;
-            }
-          }
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    body {
-        .img {
-            height: 383px;
-        }
-
-        main {
-            margin-left: 193px;
-            margin-right: 193px;
-
-            .title {
-                justify-content: center;
-
-                .icon-heart {
-                    right: 360px;
-                }
-            }
-
-            section {
-                margin-left: 210px;
-                margin-right: 210px;
-
-                h3 {
-                    &:after {
-                        margin-left: 0px;
-                        margin-right: 0px;
-                    }
-                }
-            }
-        }
-
-        footer {
-            display: flex;
-            flex-direction: row-reverse;
-            align-items: center;
-            gap: 100px;
-            padding-top: 64px;
-      
-            .text-footer {
-              display: flex;
-              flex-direction: row;
-            }
-          }
     }
 }
