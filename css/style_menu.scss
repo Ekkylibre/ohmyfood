@@ -27,6 +27,10 @@
     }
 }
 
+@mixin margin-top-bottom {
+    margin: 0;
+    padding: 0;
+  }
 /* Coulors */
 $blanc: #F3F3F3;
 $vert: #008766;
@@ -44,8 +48,7 @@ html {
 
 body {
     background-color: $grisClair;
-    margin: 0;
-    padding: 0;
+    @include margin-top-bottom;
 
     header {
         @include flexbox-center;
@@ -267,8 +270,7 @@ body {
             font-family: Shrikhand;
             font-size: 18px;
             font-weight: 400;
-            margin-top: 0;
-            margin-bottom: 0;
+            @include margin-top-bottom;
         }
 
         .text-footer {
@@ -292,8 +294,7 @@ body {
         }
 
         p {
-            margin-top: 0;
-            margin-bottom: 0;
+            @include margin-top-bottom;
             display: inline-block;
             vertical-align: middle;
         }

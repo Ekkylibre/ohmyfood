@@ -5,6 +5,22 @@
   align-items: center;
 }
 
+@mixin margin-top-bottom {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin flebox-align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin icons-menu {
+  padding-right: 25px;
+  font-size: 1.5em;
+  padding-top: 20px;
+}
+
 /* Coulors */
 $blanc: #F3F3F3;
 $vert: #008766;
@@ -25,8 +41,7 @@ html {
 
 body {
   background-color: #F6F6F6;
-  margin: 0;
-  padding: 0;
+  @include margin-top-bottom;
 
   header {
     @include flexbox-center;
@@ -56,9 +71,8 @@ body {
     }
 
     .hero {
-      display: flex;
+      @include flebox-align-center;
       flex-direction: column;
-      align-items: center;
       text-align: center;
       padding-top: 39px;
       padding-bottom: 57px;
@@ -89,8 +103,7 @@ body {
       }
 
       p {
-        margin-top: 0;
-        margin-bottom: 0;
+        @include margin-top-bottom;
         padding-bottom: 27px;
       }
     }
@@ -112,34 +125,18 @@ body {
 
           h3 {
             font-size: 23px;
-            margin-top: 0;
-            margin-bottom: 0;
+            @include margin-top-bottom;
           }
 
-          .step-un {
-            display: flex;
-            align-items: center;
-
-            .fa-mobile-alt {
-              color: $gris;
-            }
-          }
-
-          .step-deux {
-            display: flex;
-            align-items: center;
-
-            .fa-list-ul {
-              color: $gris;
-            }
-          }
-
+          .step-un,
+          .step-deux,
           .step-trois {
-            display: flex;
-            align-items: center;
+            @include flebox-align-center;
 
+            .fa-mobile-alt,
+            .fa-list-ul,
             .fa-store {
-              color: $violet;
+              color: $gris;
             }
           }
 
@@ -154,27 +151,23 @@ body {
             background: var(--Background, #F6F6F6);
             box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 
+            &:hover {
+              .fa-mobile-alt,
+              .fa-list-ul,
+              .fa-store {
+                color: $Primary;
+              }
+            }
+
             p {
               font-weight: 500;
               width: 211px;
             }
 
-            .fa-mobile-alt {
-              padding-right: 25px;
-              font-size: 1.5em;
-              padding-top: 20px;
-            }
-
-            .fa-list-ul {
-              padding-right: 25px;
-              font-size: 1.5em;
-              padding-top: 20px;
-            }
-
+            .fa-mobile-alt,
+            .fa-list-ul,
             .fa-store {
-              padding-right: 25px;
-              font-size: 1.5em;
-              padding-top: 20px;
+              @include icons-menu;
             }
           }
 
@@ -205,8 +198,7 @@ body {
 
           h3 {
             font-size: 23px;
-            margin-top: 0;
-            margin-bottom: 0;
+            @include margin-top-bottom;
           }
 
           a {
@@ -263,13 +255,11 @@ body {
                 color: black;
 
                 h4 {
-                  margin-top: 0;
-                  margin-bottom: 0;
+                  @include margin-top-bottom;
                 }
 
                 p {
-                  margin-top: 0;
-                  margin-bottom: 0;
+                  @include margin-top-bottom;
                 }
               }
 
@@ -307,8 +297,7 @@ footer {
     font-family: Shrikhand;
     font-size: 18px;
     font-weight: 400;
-    margin-top: 0;
-    margin-bottom: 0;
+    @include margin-top-bottom;
   }
 
   .text-footer {
@@ -332,8 +321,7 @@ footer {
   }
 
   p {
-    margin-top: 0;
-    margin-bottom: 0;
+    @include margin-top-bottom;
     display: inline-block;
     vertical-align: middle;
   }
@@ -503,7 +491,7 @@ footer {
 /* Responsive */
 
 @media screen and (min-width: 1024px) {
-    body {
+  body {
     main {
       section {
         .functioning {
@@ -553,7 +541,7 @@ footer {
             .steps {
               display: flex;
               flex-direction: row;
-              
+
               .text-step {
                 width: 322.486px;
               }
