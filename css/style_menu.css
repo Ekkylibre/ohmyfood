@@ -111,7 +111,6 @@ html {
 }
 
 body {
-  background-color: #f6f6f6;
   margin: 0;
   padding: 0;
 }
@@ -149,6 +148,8 @@ body main {
   flex-direction: column;
   gap: 40px;
   transform: translateY(-40px);
+  margin-bottom: -40px;
+  padding-bottom: 40px;
 }
 body main .title {
   display: flex;

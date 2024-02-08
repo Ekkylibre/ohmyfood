@@ -1,0 +1,32 @@
+@media screen and (max-width: 375px) {
+    body {
+      main {
+        section {
+          .functioning {
+            div {
+              .steps {
+                .text-step {
+                  width: 280px;
+                  .fa-mobile-alt, .fa-list-ul, .fa-store {
+                    padding-right: 10px;
+                  }
+                }
+              }
+            }
+          }
+        }
+  
+        section {
+          .restaurants {
+            .restaurants-container {
+              .card {
+                img {
+                  width: 280px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
