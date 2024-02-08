@@ -330,9 +330,6 @@ body footer p {
 }
 
 @media screen and (min-width: 1024px) {
-  body .img {
-    height: 383px;
-  }
   body main {
     margin-left: 193px;
     margin-right: 193px;
@@ -364,9 +361,6 @@ body footer p {
   }
 }
 @media screen and (min-width: 1440px) {
-  body .img {
-    height: 383px;
-  }
   body main {
     margin-left: 193px;
     margin-right: 193px;
