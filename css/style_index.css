@@ -364,6 +364,9 @@ footer .text-footer {
   flex-direction: column;
   gap: 7px;
 }
+footer .text-footer a {
+  color: white;
+}
 footer .footer-content {
   display: flex;
   align-items: center;
@@ -474,5 +477,16 @@ footer p {
   body footer .text-footer {
     display: flex;
     flex-direction: row;
+  }
+}
+@media screen and (max-width: 375px) {
+  body main section .functioning div .steps .text-step {
+    width: 280px;
+  }
+  body main section .functioning div .steps .text-step .fa-mobile-alt, body main section .functioning div .steps .text-step .fa-list-ul, body main section .functioning div .steps .text-step .fa-store {
+    padding-right: 10px;
+  }
+  body main section .restaurants .restaurants-container .card img {
+    width: 280px;
   }
 }/*# sourceMappingURL=style_index.css.map */
