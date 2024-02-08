@@ -65,9 +65,11 @@ body {
                 padding-left: 17px;
                 margin-top: 25px;
                 cursor: pointer;
+        
 
                 svg {
                     fill: none;
+                    transition: .1s ease-in-out;
 
                     &:hover {
                         fill: url(#gradient);
@@ -132,7 +134,7 @@ body {
 
                                 .fa-check-circle {
                                     display: block;
-                                    animation: .3s slide-left forwards; /* a modifier*/
+                                    animation: .3s slide-left forwards;
                                 }
                             }
                         }
@@ -143,6 +145,18 @@ body {
                         justify-content: space-between;
                         font-weight: 300;
                         overflow: hidden;
+
+                        &:not(:hover) {
+                            .content-icon {
+                                .price {
+                                    animation: .3s slide-right forwards;
+                                }
+                                .fa-check-circle {
+                                    display: block;
+                                    animation: .3s slide-right forwards;
+                                }
+                            }
+                        }
 
                         .text-box {
                             display: flex;

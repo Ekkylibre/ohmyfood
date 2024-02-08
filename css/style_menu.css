@@ -98,6 +98,14 @@
     visibility: hidden;
   }
 }
+@keyframes slide-right {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
 html {
   font-family: Roboto;
 }
@@ -162,6 +170,7 @@ body main .title .icon-heart {
 }
 body main .title .icon-heart svg {
   fill: none;
+  transition: 0.1s ease-in-out;
 }
 body main .title .icon-heart svg:hover {
   fill: url(#gradient);
@@ -221,13 +230,20 @@ body main section .card .background-box:hover .content-box .content-icon .price 
 }
 body main section .card .background-box:hover .content-box .content-icon .fa-check-circle {
   display: block;
-  animation: 0.3s slide-left forwards; /* a modifier*/
+  animation: 0.3s slide-left forwards;
 }
 body main section .card .background-box .content-box {
   display: flex;
   justify-content: space-between;
   font-weight: 300;
   overflow: hidden;
+}
+body main section .card .background-box .content-box:not(:hover) .content-icon .price {
+  animation: 0.3s slide-right forwards;
+}
+body main section .card .background-box .content-box:not(:hover) .content-icon .fa-check-circle {
+  display: block;
+  animation: 0.3s slide-right forwards;
 }
 body main section .card .background-box .content-box .text-box {
   display: flex;
