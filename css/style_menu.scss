@@ -2,9 +2,6 @@
 @import "style/mixins";
 @import "style/keyframes";
 
-@import "responsive/menu_tablet";
-@import "responsive/menu_desktop";
-
 html {
     font-family: Roboto;
 }
@@ -263,3 +260,6 @@ body {
         }
     }
 }
+
+@import "responsive/menu_tablet";
+@import "responsive/menu_desktop";
