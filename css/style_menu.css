@@ -222,7 +222,7 @@ body main section .card .background-box:hover .content-box .content-icon .price 
 }
 body main section .card .background-box:hover .content-box .content-icon .fa-check-circle {
   display: block;
-  animation: 0.3s slide-left forwards; /* a modifier*/
+  animation: 0.3s slide-left forwards;
 }
 body main section .card .background-box .content-box {
   display: flex;
