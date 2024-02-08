@@ -1,0 +1,393 @@
+@keyframes slide-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes dot-3-move {
+  20% {
+    transform: scale(1);
+  }
+  45% {
+    transform: translateY(-18px) scale(0.45);
+  }
+  60% {
+    transform: translateY(-90px) scale(0.45);
+  }
+  80% {
+    transform: translateY(-90px) scale(0.45);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+@keyframes dot-2-move {
+  20% {
+    transform: scale(1);
+  }
+  45% {
+    transform: translate(-16px, 12px) scale(0.45);
+  }
+  60% {
+    transform: translate(-80px, 60px) scale(0.45);
+  }
+  80% {
+    transform: translate(-80px, 60px) scale(0.45);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+@keyframes dot-1-move {
+  20% {
+    transform: scale(1);
+  }
+  45% {
+    transform: translate(16px, 12px) scale(0.45);
+  }
+  60% {
+    transform: translate(80px, 60px) scale(0.45);
+  }
+  80% {
+    transform: translate(80px, 60px) scale(0.45);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+@keyframes rotate-move {
+  55% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  80% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes index {
+  0%, 100% {
+    z-index: 3;
+  }
+  33.3% {
+    z-index: 2;
+  }
+  66.6% {
+    z-index: 1;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+html {
+  font-family: Roboto;
+}
+
+body {
+  background-color: #f6f6f6;
+  margin: 0;
+  padding: 0;
+}
+body header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--White, #FFF);
+  position: relative;
+  height: 63px;
+}
+body header a {
+  color: black;
+  position: absolute;
+  left: 17px;
+}
+body header a .fa-arrow-left {
+  font-size: 20px;
+  cursor: pointer;
+}
+body header .logo {
+  font-family: Shrikhand;
+  font-weight: 400;
+}
+body .background-img {
+  width: 100%;
+  height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main {
+  background-color: #f6f6f6;
+  border-radius: 30px 30px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  transform: translateY(-40px);
+}
+body main .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 17px;
+  font-family: Shrikhand;
+  font-weight: 400;
+}
+body main .title h2 {
+  margin-bottom: 0;
+  font-weight: 400;
+}
+body main .title .icon-heart {
+  padding-right: 17px;
+  padding-left: 17px;
+  margin-top: 25px;
+  cursor: pointer;
+}
+body main .title .icon-heart svg {
+  fill: none;
+}
+body main .title .icon-heart svg:hover {
+  fill: url(#gradient);
+  stroke: url(#gradient);
+  stroke-width: 0px;
+}
+body main #section1 {
+  animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+body main #section2 {
+  animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 0.25s;
+}
+body main #section3 {
+  animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 0.5s;
+}
+body main section {
+  padding-left: 13px;
+  padding-right: 13px;
+}
+body main section h3 {
+  font-weight: 100;
+  margin-top: 0;
+}
+body main section h3::after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background: #99E2D0;
+  position: absolute;
+  left: 15px;
+  transform: translateY(27px);
+}
+body main section .card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+body main section .card .background-box {
+  background-color: white;
+  box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  cursor: pointer;
+  overflow: hidden;
+}
+body main section .card .background-box h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+body main section .card .background-box p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+body main section .card .background-box:hover .content-box .content-icon .price {
+  animation: 0.3s slide-left forwards; /* a modifier*/
+}
+body main section .card .background-box:hover .content-box .content-icon .fa-check-circle {
+  display: block;
+  animation: 0.3s slide-left forwards; /* a modifier*/
+}
+body main section .card .background-box .content-box {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+  overflow: hidden;
+}
+body main section .card .background-box .content-box .text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 13.5px;
+  padding-bottom: 13.5px;
+  padding-left: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+body main section .card .background-box .content-box .text-box h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+body main section .card .background-box .content-box .text-box p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+body main section .card .background-box .content-box .content-icon {
+  display: flex;
+}
+body main section .card .background-box .content-box .content-icon .price {
+  display: flex;
+  align-items: flex-end;
+  background-color: white;
+  padding: 15px;
+  font-weight: 700;
+}
+body main section .card .background-box .content-box .content-icon .fa-check-circle {
+  display: none;
+  color: white;
+  background-color: #99E2D0;
+  font-size: 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+body main .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .button button {
+  width: 218px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 25px;
+  background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+body main .button button:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.5);
+}
+body footer {
+  display: flex;
+  flex-direction: column;
+  background: var(--Grey, #353535);
+  color: white;
+  padding: 22px 25px 22px 25px;
+  gap: 16px;
+}
+body footer .logo {
+  font-family: Shrikhand;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+body footer .text-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+body footer .footer-content {
+  display: flex;
+  align-items: center;
+}
+body footer .footer-content .fa-utensils {
+  padding-right: 11px;
+}
+body footer .footer-content .fa-hands-helping {
+  padding-right: 11px;
+  font-size: 10px;
+}
+body footer p {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 1024px) {
+  body main {
+    margin-left: 193px;
+    margin-right: 193px;
+  }
+  body main .title {
+    justify-content: center;
+  }
+  body main .title .icon-heart {
+    right: 150px;
+  }
+  body main section {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  body main section h3:after {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  body footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 100px;
+    padding-top: 64px;
+  }
+  body footer .text-footer {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1440px) {
+  body main {
+    margin-left: 193px;
+    margin-right: 193px;
+  }
+  body main .title {
+    justify-content: center;
+  }
+  body main .title .icon-heart {
+    right: 360px;
+  }
+  body main section {
+    margin-left: 210px;
+    margin-right: 210px;
+  }
+  body main section h3:after {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  body footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 100px;
+    padding-top: 64px;
+  }
+  body footer .text-footer {
+    display: flex;
+    flex-direction: row;
+  }
+}/*# sourceMappingURL=style_menu.css.map */

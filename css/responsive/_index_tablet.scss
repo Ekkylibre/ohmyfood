@@ -1,0 +1,42 @@
+@media screen and (min-width: 1024px) {
+    body {
+      main {
+        section {
+          .functioning {
+            div {
+              .steps {
+                .text-step {
+                  width: 600px;
+                }
+              }
+            }
+          }
+        }
+  
+        section {
+          .restaurants {
+            .restaurants-container {
+              .card {
+                img {
+                  width: 600px;
+                }
+              }
+            }
+          }
+        }
+      }
+  
+      footer {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 100px;
+        padding-top: 64px;
+  
+        .text-footer {
+          display: flex;
+          flex-direction: row;
+        }
+      }
+    }
+  }

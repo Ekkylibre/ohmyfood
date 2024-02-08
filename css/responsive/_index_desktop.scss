@@ -1,0 +1,49 @@
+@media screen and (min-width: 1440px) {
+    body {
+      main {
+        section {
+          .functioning {
+            div {
+              .steps {
+                display: flex;
+                flex-direction: row;
+  
+                .text-step {
+                  width: 322.486px;
+                }
+              }
+            }
+          }
+        }
+  
+        section {
+          .restaurants {
+            .restaurants-container {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              grid-gap: 50px 100px;
+  
+              .card {
+                img {
+                  width: 490px;
+                }
+              }
+            }
+          }
+        }
+      }
+  
+      footer {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 100px;
+        padding-top: 64px;
+  
+        .text-footer {
+          display: flex;
+          flex-direction: row;
+        }
+      }
+    }
+  }

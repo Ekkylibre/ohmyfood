@@ -1,0 +1,350 @@
+@import "style/colors";
+@import "style/mixins";
+@import "style/keyframes";
+
+html {
+  font-family: Roboto;
+}
+
+body {
+  background-color: #F6F6F6;
+  @include margin-top-bottom;
+
+  header {
+    @include flexbox-center;
+    background: var(--White, #FFF);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    position: relative;
+    height: 63px;
+
+    .logo {
+      font-family: Shrikhand;
+      font-weight: 400;
+    }
+  }
+
+  main {
+    background-color: $grisClair;
+
+    .location {
+      @include flexbox-center;
+      gap: 17px;
+      background: var(--Grey-2, #EAEAEA);
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+      p {
+        font-weight: 500;
+      }
+    }
+
+    .hero {
+      @include flebox-align-center;
+      flex-direction: column;
+      text-align: center;
+      padding-top: 39px;
+      padding-bottom: 57px;
+      padding-left: 26px;
+      padding-right: 26px;
+
+      h2 {
+        margin-top: 0;
+      }
+
+      button {
+        width: 218px;
+        height: 50px;
+        flex-shrink: 0;
+        border-radius: 25px;
+        background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+
+        &:hover {
+          background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+          box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.5);
+        }
+      }
+
+      p {
+        @include margin-top-bottom;
+        padding-bottom: 27px;
+      }
+    }
+
+    section {
+      .functioning {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        padding-top: 48px;
+        padding-bottom: 68px;
+
+        .steps {
+          display: flex;
+          flex-direction: column;
+          gap: 24.92px;
+
+          h3 {
+            font-size: 23px;
+            @include margin-top-bottom;
+          }
+
+          .step-un,
+          .step-deux,
+          .step-trois {
+            @include flebox-align-center;
+
+            .fa-mobile-alt,
+            .fa-list-ul,
+            .fa-store {
+              color: $gris;
+            }
+          }
+
+          .text-step {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            width: 322.486px;
+            height: 72.379px;
+            flex-shrink: 0;
+            border-radius: 20px;
+            background: var(--Background, #F6F6F6);
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+
+            &:hover {
+              .fa-mobile-alt,
+              .fa-list-ul,
+              .fa-store {
+                color: $Primary;
+              }
+            }
+
+            p {
+              font-weight: 500;
+              width: 211px;
+            }
+
+            .fa-mobile-alt,
+            .fa-list-ul,
+            .fa-store {
+              @include icons-menu;
+            }
+          }
+
+          .number-step {
+            @include flexbox-center;
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            background-color: #9356DC;
+            color: white;
+            position: absolute;
+            border-radius: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+
+      .restaurants {
+        @include flexbox-center;
+        flex-direction: column;
+        padding-top: 54px;
+        padding-bottom: 66px;
+
+        .restaurants-container {
+          display: flex;
+          flex-direction: column;
+          gap: 18px;
+
+          h3 {
+            font-size: 23px;
+            @include margin-top-bottom;
+          }
+
+          a {
+            text-decoration: none;
+          }
+
+          .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 15px;
+            background-color: white;
+            position: relative;
+            cursor: pointer;
+
+            .new-card {
+              @include flexbox-center;
+              background: $vertClair;
+              width: 80px;
+              height: 29px;
+              font-weight: 500;
+              border-radius: 2px;
+              position: absolute;
+              top: 13px;
+              right: 12px;
+              z-index: 1;
+
+              p {
+                color: $vert;
+                font-size: 14px;
+              }
+            }
+
+            img {
+              width: 340px;
+              height: 194px;
+              border-radius: 15px 15px 0 0;
+              object-fit: cover;
+            }
+
+            .bloc-restaurant {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-left: 13px;
+              margin-right: 25px;
+
+              .text-restaurant {
+                display: flex;
+                flex-direction: column;
+                padding-top: 16px;
+                padding-bottom: 12px;
+                gap: 5px;
+                color: black;
+
+                h4 {
+                  @include margin-top-bottom;
+                }
+
+                p {
+                  @include margin-top-bottom;
+                }
+              }
+
+              .icon-heart {
+                cursor: pointer;
+
+                svg {
+                  fill: none;
+
+                  &:hover {
+                    fill: url(#gradient);
+                    stroke: url(#gradient);
+                    stroke-width: 0px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background: var(--Grey, #353535);
+  color: white;
+  padding: 22px 25px 22px 25px;
+  gap: 16px;
+
+  .logo {
+    font-family: Shrikhand;
+    font-size: 18px;
+    font-weight: 400;
+    @include margin-top-bottom;
+  }
+
+  .text-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .footer-content {
+    display: flex;
+    align-items: center;
+
+    .fa-utensils {
+      padding-right: 11px;
+    }
+
+    .fa-hands-helping {
+      padding-right: 11px;
+      font-size: 10px;
+    }
+  }
+
+  p {
+    @include margin-top-bottom;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+// Animation Loader //
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 2;
+  animation: fade-out 0.5s linear 2s forwards;
+
+  .container {
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    animation: rotate-move 2s ease-in-out infinite, fade-out 0.5s linear 2s forwards;
+    z-index: 1;
+
+    .dot {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: #000;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    .dot-3 {
+      background-color: $Tertiary;
+      animation: dot-3-move 2s ease infinite, index 6s ease infinite;
+    }
+
+    .dot-2 {
+      background-color: $Primary;
+      animation: dot-2-move 2s ease infinite, index 6s -4s ease infinite;
+    }
+
+    .dot-1 {
+      background-color: $Secondary;
+      animation: dot-1-move 2s ease infinite, index 6s -2s ease infinite;
+    }
+  }
+}
+
+@import "responsive/index_tablet";
+@import "responsive/index_desktop";

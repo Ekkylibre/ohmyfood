@@ -1,0 +1,41 @@
+@media screen and (min-width: 1440px) {
+    body {
+        main {
+            margin-left: 193px;
+            margin-right: 193px;
+
+            .title {
+                justify-content: center;
+
+                .icon-heart {
+                    right: 360px;
+                }
+            }
+
+            section {
+                margin-left: 210px;
+                margin-right: 210px;
+
+                h3 {
+                    &:after {
+                        margin-left: 0px;
+                        margin-right: 0px;
+                    }
+                }
+            }
+        }
+
+        footer {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            gap: 100px;
+            padding-top: 64px;
+      
+            .text-footer {
+              display: flex;
+              flex-direction: row;
+            }
+          }
+    }
+}

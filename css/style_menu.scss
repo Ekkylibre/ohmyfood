@@ -1,0 +1,265 @@
+@import "style/colors";
+@import "style/mixins";
+@import "style/keyframes";
+
+html {
+    font-family: Roboto;
+}
+
+body {
+    background-color: $grisClair;
+    @include margin-top-bottom;
+
+    header {
+        @include flexbox-center;
+        background: var(--White, #FFF);
+        position: relative;
+        height: 63px;
+
+        a {
+            color: black;
+            position: absolute;
+            left: 17px;
+
+            .fa-arrow-left {
+                font-size: 20px;
+                cursor: pointer;
+            }
+        }
+
+        .logo {
+            font-family: Shrikhand;
+            font-weight: 400;
+        }
+    }
+
+    .background-img {
+        width: 100%;
+        height: 275px;
+        object-fit: cover;
+    }
+
+    main {
+        background-color: $grisClair;
+        border-radius: 30px 30px 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        transform: translateY(-40px);
+
+        .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include padding;
+            font-family: Shrikhand;
+            font-weight: 400;
+
+            h2 {
+                margin-bottom: 0;
+                font-weight: 400;
+            }
+
+            .icon-heart {
+                padding-right: 17px;
+                padding-left: 17px;
+                margin-top: 25px;
+                cursor: pointer;
+
+                svg {
+                    fill: none;
+
+                    &:hover {
+                        fill: url(#gradient);
+                        stroke: url(#gradient);
+                        stroke-width: 0px;
+                    }
+                }
+            }
+        }
+
+        #section1 {
+            animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+
+        #section2 {
+            animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation-delay: 0.25s;
+        }
+
+        #section3 {
+            animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation-delay: 0.5s;
+        }
+
+        section {
+            @include padding-box-container();
+
+            h3 {
+                font-weight: 100;
+                margin-top: 0;
+
+                &::after {
+                    content: '';
+                    width: 50px;
+                    height: 4px;
+                    background: $vertClair;
+                    position: absolute;
+                    left: 15px;
+                    transform: translateY(27px);
+                }
+            }
+
+            .card {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+                .background-box {
+                    background-color: white;
+                    box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
+                    border-radius: 15px;
+                    @include margin-box-text;
+                    cursor: pointer;
+                    overflow: hidden;
+
+                    &:hover {
+                        .content-box {
+                            .content-icon {
+                                .price {
+                                    animation: .3s slide-left forwards; /* a modifier*/
+                                }
+
+                                .fa-check-circle {
+                                    display: block;
+                                    animation: .3s slide-left forwards; /* a modifier*/
+                                }
+                            }
+                        }
+                    }
+
+                    .content-box {
+                        display: flex;
+                        justify-content: space-between;
+                        font-weight: 300;
+                        overflow: hidden;
+
+                        .text-box {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 5px;
+                            padding-top: 13.5px;
+                            padding-bottom: 13.5px;
+                            padding-left: 15px;
+                            white-space: nowrap;
+                            overflow: hidden;
+
+                            h4 {
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                transition: max-height 0.5s ease, opacity 0.5s ease;
+                            }
+
+                            p {
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                transition: max-height 0.5s ease, opacity 0.5s ease;
+                            }
+                        }
+
+                        .content-icon {
+                            display: flex;
+
+                            .price {
+                                display: flex;
+                                align-items: flex-end;
+                                background-color: white;
+                                padding: 15px;
+                                font-weight: 700;
+                            }
+
+                            .fa-check-circle {
+                                display: none;
+                                color: white;
+                                background-color: $vertClair;
+                                font-size: 20px;
+                                padding-top: 25px;
+                                padding-bottom: 25px;
+                                padding-left: 20px;
+                                padding-right: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .button {
+            @include flexbox-center;
+
+            button {
+                width: 218px;
+                height: 50px;
+                flex-shrink: 0;
+                border-radius: 25px;
+                background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+                box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+                border: none;
+                color: white;
+                font-size: 16px;
+                cursor: pointer;
+                transition: .3s ease-in-out;
+
+                &:hover {
+                    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+                    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        background: var(--Grey, #353535);
+        color: white;
+        padding: 22px 25px 22px 25px;
+        gap: 16px;
+
+        .logo {
+            font-family: Shrikhand;
+            font-size: 18px;
+            font-weight: 400;
+            @include margin-top-bottom;
+        }
+
+        .text-footer {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .footer-content {
+            display: flex;
+            align-items: center;
+
+            .fa-utensils {
+                padding-right: 11px;
+            }
+
+            .fa-hands-helping {
+                padding-right: 11px;
+                font-size: 10px;
+            }
+        }
+
+        p {
+            @include margin-top-bottom;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}
+
+@import "responsive/menu_tablet";
+@import "responsive/menu_desktop";
