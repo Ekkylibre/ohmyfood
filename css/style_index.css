@@ -98,6 +98,14 @@
     visibility: hidden;
   }
 }
+@keyframes slide-right {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
 html {
   font-family: Roboto;
 }

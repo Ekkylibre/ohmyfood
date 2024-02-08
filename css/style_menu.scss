@@ -146,6 +146,18 @@ body {
                         font-weight: 300;
                         overflow: hidden;
 
+                        &:not(:hover) {
+                            .content-icon {
+                                .price {
+                                    animation: .3s slide-right forwards;
+                                }
+                                .fa-check-circle {
+                                    display: block;
+                                    animation: .3s slide-right forwards;
+                                }
+                            }
+                        }
+
                         .text-box {
                             display: flex;
                             flex-direction: column;

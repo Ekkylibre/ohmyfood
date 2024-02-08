@@ -98,6 +98,14 @@
     visibility: hidden;
   }
 }
+@keyframes slide-right {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
 html {
   font-family: Roboto;
 }
@@ -229,6 +237,13 @@ body main section .card .background-box .content-box {
   justify-content: space-between;
   font-weight: 300;
   overflow: hidden;
+}
+body main section .card .background-box .content-box:not(:hover) .content-icon .price {
+  animation: 0.3s slide-right forwards;
+}
+body main section .card .background-box .content-box:not(:hover) .content-icon .fa-check-circle {
+  display: block;
+  animation: 0.3s slide-right forwards;
 }
 body main section .card .background-box .content-box .text-box {
   display: flex;
