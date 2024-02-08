@@ -162,6 +162,7 @@ body main .title .icon-heart {
 }
 body main .title .icon-heart svg {
   fill: none;
+  transition: 0.1s ease-in-out;
 }
 body main .title .icon-heart svg:hover {
   fill: url(#gradient);

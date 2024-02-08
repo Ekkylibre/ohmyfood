@@ -328,6 +328,7 @@ body main section .restaurants .restaurants-container .card .bloc-restaurant .ic
 }
 body main section .restaurants .restaurants-container .card .bloc-restaurant .icon-heart svg {
   fill: none;
+  transition: 0.1s ease-in-out;
 }
 body main section .restaurants .restaurants-container .card .bloc-restaurant .icon-heart svg:hover {
   fill: url(#gradient);

@@ -235,6 +235,7 @@ body {
 
                 svg {
                   fill: none;
+                  transition: .1s ease-in-out;
 
                   &:hover {
                     fill: url(#gradient);

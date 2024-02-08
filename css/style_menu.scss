@@ -65,9 +65,11 @@ body {
                 padding-left: 17px;
                 margin-top: 25px;
                 cursor: pointer;
+        
 
                 svg {
                     fill: none;
+                    transition: .1s ease-in-out;
 
                     &:hover {
                         fill: url(#gradient);
