@@ -315,6 +315,9 @@ body footer {
   padding: 22px 25px 22px 25px;
   gap: 16px;
 }
+body footer a {
+  color: white;
+}
 body footer .logo {
   font-family: Shrikhand;
   font-size: 18px;
