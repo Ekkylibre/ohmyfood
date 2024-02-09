@@ -1,6 +1,6 @@
 @keyframes slide-left {
   from {
-    transform: translateX(100%);
+    transform: translateX(60%);
   }
   to {
     transform: translateX(0%);
@@ -8,7 +8,7 @@
 }
 @keyframes slide-in-bottom {
   0% {
-    transform: translateY(1000px);
+    transform: translateY(100px);
     opacity: 0;
   }
   100% {
@@ -100,10 +100,10 @@
 }
 @keyframes slide-right {
   from {
-    transform: translateX(0%);
+    transform: translateX(-100%);
   }
   to {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
 }
 html {
@@ -226,24 +226,19 @@ body main section .card .background-box p {
   margin-top: 0;
   margin-bottom: 0;
 }
-body main section .card .background-box:hover .content-box .content-icon .price {
-  animation: 0.3s slide-left forwards; /* a modifier*/
-}
-body main section .card .background-box:hover .content-box .content-icon .fa-check-circle {
-  display: block;
-  animation: 0.3s slide-left forwards;
-}
 body main section .card .background-box .content-box {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  font-weight: 300;
-  overflow: hidden;
+  align-items: center;
 }
-body main section .card .background-box .content-box:not(:hover) .content-icon .price {
-  animation: 0.3s slide-right forwards;
+body main section .card .background-box .content-box:hover .content-icon {
+  animation: 0.3s slide-left forwards;
 }
-body main section .card .background-box .content-box:not(:hover) .content-icon .fa-check-circle {
+body main section .card .background-box .content-box:hover .content-icon .validation-box {
   display: block;
+}
+body main section .card .background-box .content-box:not(:hover) .content-icon {
   animation: 0.3s slide-right forwards;
 }
 body main section .card .background-box .content-box .text-box {
@@ -259,24 +254,27 @@ body main section .card .background-box .content-box .text-box {
 body main section .card .background-box .content-box .text-box h4 {
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 body main section .card .background-box .content-box .text-box p {
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 body main section .card .background-box .content-box .content-icon {
   display: flex;
+  background-color: white;
 }
 body main section .card .background-box .content-box .content-icon .price {
   display: flex;
-  align-items: flex-end;
+  align-items: end;
   background-color: white;
-  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 5px;
+  padding-right: 15px;
   font-weight: 700;
+  margin-top: 25px;
 }
-body main section .card .background-box .content-box .content-icon .fa-check-circle {
+body main section .card .background-box .validation-box {
   display: none;
   color: white;
   background-color: #99E2D0;
@@ -285,6 +283,7 @@ body main section .card .background-box .content-box .content-icon .fa-check-cir
   padding-bottom: 25px;
   padding-left: 20px;
   padding-right: 20px;
+  border-radius: 0px 15px 15px 0px;
 }
 body main .button {
   display: flex;
