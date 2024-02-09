@@ -66,7 +66,7 @@ body {
                 padding-left: 17px;
                 margin-top: 25px;
                 cursor: pointer;
-        
+
 
                 svg {
                     fill: none;
@@ -126,36 +126,25 @@ body {
                     cursor: pointer;
                     overflow: hidden;
 
-                    &:hover {
-                        .content-box {
-                            .content-icon {
-                                .price {
-                                    animation: .3s slide-left forwards; /* a modifier*/
-                                }
+                    .content-box {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
 
-                                .fa-check-circle {
+                        &:hover {
+                            .content-icon {
+                                animation: .3s slide-left forwards;
+
+                                .validation-box {
                                     display: block;
-                                    animation: .3s slide-left forwards;
                                 }
                             }
                         }
-                    }
-
-                    .content-box {
-                        display: flex;
-                        justify-content: space-between;
-                        font-weight: 300;
-                        overflow: hidden;
 
                         &:not(:hover) {
                             .content-icon {
-                                .price {
-                                    animation: .3s slide-right forwards;
-                                }
-                                .fa-check-circle {
-                                    display: block;
-                                    animation: .3s slide-right forwards;
-                                }
+                                animation: .3s slide-right forwards;
                             }
                         }
 
@@ -172,38 +161,44 @@ body {
                             h4 {
                                 overflow: hidden;
                                 text-overflow: ellipsis;
-                                transition: max-height 0.5s ease, opacity 0.5s ease;
                             }
 
                             p {
                                 overflow: hidden;
                                 text-overflow: ellipsis;
-                                transition: max-height 0.5s ease, opacity 0.5s ease;
                             }
                         }
 
                         .content-icon {
                             display: flex;
+                            background-color: white;
 
                             .price {
                                 display: flex;
-                                align-items: flex-end;
+                                align-items: end;
                                 background-color: white;
-                                padding: 15px;
+                                padding-top: 15px;
+                                padding-bottom: 15px;
+                                padding-left: 5px;
+                                padding-right: 15px;
                                 font-weight: 700;
-                            }
-
-                            .fa-check-circle {
-                                display: none;
-                                color: white;
-                                background-color: $vertClair;
-                                font-size: 20px;
-                                padding-top: 25px;
-                                padding-bottom: 25px;
-                                padding-left: 20px;
-                                padding-right: 20px;
+                                margin-top: 25px;
                             }
                         }
+
+
+                    }
+
+                    .validation-box {
+                        display: none;
+                        color: white;
+                        background-color: $vertClair;
+                        font-size: 20px;
+                        padding-top: 25px;
+                        padding-bottom: 25px;
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        border-radius: 0px 15px 15px 0px;
                     }
                 }
             }

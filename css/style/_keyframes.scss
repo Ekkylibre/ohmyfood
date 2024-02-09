@@ -1,6 +1,6 @@
 @keyframes slide-left {
   from {
-    transform: translateX(100%);
+    transform: translateX(60%);
   }
 
   to {
@@ -10,7 +10,7 @@
 
 @keyframes slide-in-bottom {
   0% {
-    transform: translateY(1000px);
+    transform: translateY(100px);
     opacity: 0;
   }
 
@@ -130,10 +130,10 @@
 
 @keyframes slide-right {
   from {
-    transform: translateX(0%);
+    transform: translateX(-100%);
   }
 
   to {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
 }
